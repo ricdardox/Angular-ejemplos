@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="ejUno">
+    <head>
+        <title>Emjemplo numero 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link href="css/ejemplo1.css" rel="stylesheet"/>
+        <script src="../angular.min.js"></script>
+        <script src="js/ejemplo1.js"></script>
+    </head>
+    <body>
+        <div>Ejemplo numero 1</div>
+        <div ng-controller="ControllerUsuario">
+            <form name="usuario" ng-submit="agregarUsuario()" method="post">
+                <h2>Ejemplo de controladores</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" ng-model="nombre" />
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" ng-model="email" />
+                <label for="estado">Estado:</label>
+                <input type="checkbox" name="estado" id="estado" ng-model="estado" />
+                <input type="submit" name="enviar" id="enviar" />
+            </form>
+            <h3>Lista de usuarios <span class="badge">{{models.usuarios.length}}</span></h3>
+            <ul class="usuarios list-group" ng-repeat="usuario in models.usuarios|orderBy:'estado'">
+                <li class="list-group-item estado-{{usuario.estado}}">
+                    {{usuario.nombre}}-{{usuario.email}}
+                    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

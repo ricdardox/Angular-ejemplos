@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/03/2015, 04:36:36 PM
+    Author     : rmontes
+*/
+.usuarios{
+    width: 400px
+}
+.estado-true{
+    color: #a1aa59 ;
+}
+.estado-{
+    color:tomato;
+    font-style: italic;
+}
+.estado-true, .estado-
+{
+    font-weight: bold;
+}
+
